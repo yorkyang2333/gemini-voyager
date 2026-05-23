@@ -10583,3 +10583,33 @@ body.gv-hide-input-halo chat-loading-animation,
 body.gv-hide-input-halo .nl-canvas {
   display: none !important;
 }
+
+/* -------------------------------------------------------------------------
+ * Snackbar Dismiss Button
+ *
+ * Injected by src/pages/content/snackbarDismiss into Gemini's Angular
+ * Material snackbar notifications so users can manually close them.
+ * ------------------------------------------------------------------------- */
+.gv-snackbar-dismiss {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gv-snackbar-dismiss:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+}

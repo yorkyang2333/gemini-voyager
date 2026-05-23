@@ -160,6 +160,9 @@ export const StorageKeys = {
   // (chat-window::before + .nl-canvas blobs). Default false (halo visible).
   INPUT_HALO_HIDDEN: 'gvInputHaloHidden',
 
+  // Show a dismiss button on Gemini's snackbar notifications. Default true.
+  SNACKBAR_DISMISS_ENABLED: 'gvSnackbarDismissEnabled',
+
   // Snow effect (legacy, kept for backward compat migration)
   GV_SNOW_EFFECT: 'gvSnowEffect',
 

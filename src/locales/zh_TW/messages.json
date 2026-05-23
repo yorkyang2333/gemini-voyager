@@ -1303,6 +1303,14 @@
     "message": "隱藏 Gemini 輸入框背後的藍色徑向漸層光暈",
     "description": "輸入框光暈開關說明"
   },
+  "snackbarDismiss": {
+    "message": "通知關閉按鈕",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "在左下角通知上顯示關閉按鈕以便快速忽略",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "上下文同步",
     "description": "上下文同步標題"

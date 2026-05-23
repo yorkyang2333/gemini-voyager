@@ -1343,6 +1343,14 @@
     "message": "Gemini のチャット入力欄の背後にある青いラジアルグラデーションの光暈を非表示にします",
     "description": "Input halo hider feature hint"
   },
+  "snackbarDismiss": {
+    "message": "通知の閉じるボタン",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "左下の通知に閉じるボタンを表示して素早く非表示にできます",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "コンテキスト同期",
     "description": "Context Sync title"

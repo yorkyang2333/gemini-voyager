@@ -1343,6 +1343,14 @@
     "message": "Скрывает синий радиально-градиентный ореол за полем ввода чата Gemini",
     "description": "Input halo hider feature hint"
   },
+  "snackbarDismiss": {
+    "message": "Кнопка закрытия уведомления",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "Показывает кнопку закрытия на уведомлениях в левом нижнем углу",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "Синхронизация контекста",
     "description": "Context Sync title"

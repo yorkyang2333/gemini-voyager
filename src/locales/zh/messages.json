@@ -1343,6 +1343,14 @@
     "message": "隐藏 Gemini 输入框背后的蓝色径向渐变光晕",
     "description": "输入框光晕开关说明"
   },
+  "snackbarDismiss": {
+    "message": "通知关闭按钮",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "在左下角通知上显示关闭按钮以便快速忽略",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "上下文同步",
     "description": "上下文同步标题"

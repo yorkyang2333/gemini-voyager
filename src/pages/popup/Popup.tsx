@@ -359,6 +359,7 @@ interface SettingsUpdate {
   visualEffect?: 'off' | 'snow' | 'sakura' | 'rain';
   preventAutoScrollEnabled?: boolean;
   inputHaloHidden?: boolean;
+  snackbarDismissEnabled?: boolean;
   forkEnabled?: boolean;
   accountIsolationEnabled?: boolean;
   accountIsolationPlatform?: AccountPlatform;
@@ -489,6 +490,7 @@ export default function Popup() {
   const [visualEffect, setVisualEffect] = useState<'off' | 'snow' | 'sakura' | 'rain'>('off');
   const [preventAutoScrollEnabled, setPreventAutoScrollEnabled] = useState<boolean>(false);
   const [inputHaloHidden, setInputHaloHidden] = useState<boolean>(false);
+  const [snackbarDismissEnabled, setSnackbarDismissEnabled] = useState<boolean>(true);
   const [forkEnabled, setForkEnabled] = useState<boolean>(false);
   const [chatWidthEnabled, setChatWidthEnabled] = useState<boolean>(false);
   const [chatFontSizeEnabled, setChatFontSizeEnabled] = useState<boolean>(false);
@@ -620,6 +622,8 @@ export default function Popup() {
         payload.gvPreventAutoScrollEnabled = settings.preventAutoScrollEnabled;
       if (typeof settings.inputHaloHidden === 'boolean')
         payload[StorageKeys.INPUT_HALO_HIDDEN] = settings.inputHaloHidden;
+      if (typeof settings.snackbarDismissEnabled === 'boolean')
+        payload[StorageKeys.SNACKBAR_DISMISS_ENABLED] = settings.snackbarDismissEnabled;
       if (typeof settings.forkEnabled === 'boolean')
         payload[StorageKeys.FORK_ENABLED] = settings.forkEnabled;
       if (typeof settings.accountIsolationEnabled === 'boolean') {
@@ -988,6 +992,7 @@ export default function Popup() {
           gvSnowEffect: false,
           gvPreventAutoScrollEnabled: false,
           [StorageKeys.INPUT_HALO_HIDDEN]: false,
+          [StorageKeys.SNACKBAR_DISMISS_ENABLED]: true,
           [StorageKeys.FORK_ENABLED]: false,
           [StorageKeys.GV_ACCOUNT_ISOLATION_ENABLED]: false,
           [StorageKeys.GV_ACCOUNT_ISOLATION_ENABLED_GEMINI]: null,
@@ -1068,6 +1073,7 @@ export default function Popup() {
           }
           setPreventAutoScrollEnabled(res?.gvPreventAutoScrollEnabled === true);
           setInputHaloHidden(res?.[StorageKeys.INPUT_HALO_HIDDEN] === true);
+          setSnackbarDismissEnabled(res?.[StorageKeys.SNACKBAR_DISMISS_ENABLED] !== false);
           setForkEnabled(res?.[StorageKeys.FORK_ENABLED] === true);
           setAiStudioEnabled(res?.[StorageKeys.GV_AISTUDIO_ENABLED] !== false);
           setPersistentExportToolbarEnabled(
@@ -2767,6 +2773,25 @@ export default function Popup() {
                   onChange={(e) => {
                     setInputHaloHidden(e.target.checked);
                     apply({ inputHaloHidden: e.target.checked });
+                  }}
+                />
+              </div>
+              <div className="group flex items-center justify-between">
+                <div className="flex-1">
+                  <Label
+                    htmlFor="snackbar-dismiss-enabled"
+                    className="group-hover:text-primary cursor-pointer text-sm font-medium transition-colors"
+                  >
+                    {t('snackbarDismiss')}
+                  </Label>
+                  <p className="text-muted-foreground mt-1 text-xs">{t('snackbarDismissHint')}</p>
+                </div>
+                <Switch
+                  id="snackbar-dismiss-enabled"
+                  checked={snackbarDismissEnabled}
+                  onChange={(e) => {
+                    setSnackbarDismissEnabled(e.target.checked);
+                    apply({ snackbarDismissEnabled: e.target.checked });
                   }}
                 />
               </div>

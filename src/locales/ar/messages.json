@@ -1343,6 +1343,14 @@
     "message": "إخفاء الهالة الزرقاء المتدرجة شعاعياً خلف مربع إدخال محادثة Gemini",
     "description": "Input halo hider feature hint"
   },
+  "snackbarDismiss": {
+    "message": "زر إغلاق الإشعار",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "يعرض زر إغلاق على الإشعارات في الزاوية السفلية اليسرى",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "مزامنة السياق",
     "description": "Context Sync title"

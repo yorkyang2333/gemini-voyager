@@ -31,6 +31,7 @@ import { startGemsHider } from './gemsHider/index';
 import { startGemsSidebar } from './gemsSidebar/index';
 import { startInputCollapse } from './inputCollapse/index';
 import { startInputHaloHider } from './inputHaloHider/index';
+import { startSnackbarDismiss } from './snackbarDismiss/index';
 import { initKaTeXConfig } from './katexConfig';
 import { startMarkdownPatcher } from './markdownPatcher/index';
 import { startMermaid } from './mermaid/index';
@@ -218,6 +219,9 @@ async function initializeFeatures(): Promise<void> {
       await delay(LIGHT_FEATURE_INIT_DELAY);
 
       startInputHaloHider();
+      await delay(LIGHT_FEATURE_INIT_DELAY);
+
+      startSnackbarDismiss();
       await delay(LIGHT_FEATURE_INIT_DELAY);
 
       inputVimModeCleanup = await startInputVimMode();

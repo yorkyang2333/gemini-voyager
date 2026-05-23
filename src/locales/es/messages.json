@@ -1343,6 +1343,14 @@
     "message": "Oculta el halo azul de degradado radial detrás del cuadro de entrada del chat de Gemini",
     "description": "Input halo hider feature hint"
   },
+  "snackbarDismiss": {
+    "message": "Botón de cerrar notificación",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "Muestra un botón de cierre en las notificaciones de la esquina inferior izquierda",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "Sincronización de contexto",
     "description": "Context Sync title"

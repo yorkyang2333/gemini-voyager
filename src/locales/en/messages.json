@@ -1343,6 +1343,14 @@
     "message": "Hide the blue radial-gradient halo behind Gemini's chat input area",
     "description": "Input halo hider feature hint"
   },
+  "snackbarDismiss": {
+    "message": "Snackbar dismiss button",
+    "description": "Snackbar dismiss toggle label"
+  },
+  "snackbarDismissHint": {
+    "message": "Show a close button on bottom-left notifications to dismiss them",
+    "description": "Snackbar dismiss feature hint"
+  },
   "contextSync": {
     "message": "Context Sync",
     "description": "Context Sync title"
